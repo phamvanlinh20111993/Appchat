@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+	</head>
+	<body>
+	 <p id="f">mang:_</p>
+	 <p id = "s">rest:_</p>
+	 <p id = "d">hehe:_</p>
+     <p id = "p">shit:_</p>
+	<script>
+	
+	    Array.remove = function(array, from, to) {
+                var rest = array.slice((to || from) + 1 || array.length);
+				document.getElementById("s").innerHTML  += rest;
+                array.length = from < 0 ? array.length + from : from;
+				document.getElementById("d").innerHTML  += array.length;
+                return array.push.apply(array, rest);
+        };
+			
+	    var popups = ["le", "tao", "anh dao", "man","hong", "buoi", "cam", "quyt"];
+  		var i = 0;
+		var rest = popups.slice(7);
+		document.getElementById("p").innerHTML = rest;
+		popups.push.apply(popups,"quyt");
+		//popups.unshift("tao");
+        Array.remove(popups, 7);
+		
+		while(i < popups.length){
+		   document.getElementById("f").innerHTML += popups[i] + " ,";
+		   i++;
+		}
+	</script>
+	</body>
+</html>
