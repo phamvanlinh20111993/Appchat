@@ -1,0 +1,16 @@
+{
+  "name": "Appchat",
+  "description": "Lam app tai file tren mang",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
